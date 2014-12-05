@@ -26,6 +26,9 @@
     NSLog(@"Init FacebookConnect Session");
     self = (FacebookConnectPlugin *)[super initWithWebView:theWebView];
     self.userid = @"";
+
+    // Enable compatibility mode
+    [FBSettings enablePlatformCompatibility: YES];
     
     [FBSession openActiveSessionWithReadPermissions:nil
                                        allowLoginUI:NO
